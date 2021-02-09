@@ -21,6 +21,20 @@ namespace ConsoleAppProject.App01
         ///the disntance into feet.
         /// </summary>
 
+        public void Run()
+        {
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
+            InputFeet();
+            CalculateMiles();
+            OutputMiles();
+            InputMiles();
+            CalculateMetres();
+            OutputMetres();
+
+        }
+
         public void MilesToFeet()
         {
             PrintHeading();
