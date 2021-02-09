@@ -23,16 +23,9 @@ namespace ConsoleAppProject.App01
 
         public void Run()
         {
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
-            InputFeet();
-            CalculateMiles();
-            OutputMiles();
-            InputMiles();
-            CalculateMetres();
-            OutputMetres();
-
+            MilesToFeet();
+            FeetToMiles();
+            MilesToMetres();
         }
 
         public void MilesToFeet()
