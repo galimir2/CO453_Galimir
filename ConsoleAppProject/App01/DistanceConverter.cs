@@ -23,6 +23,7 @@ namespace ConsoleAppProject.App01
 
         public void Run()
         {
+            PrintHeading();
             MilesToFeet();
             FeetToMiles();
             MilesToMetres();
@@ -30,7 +31,6 @@ namespace ConsoleAppProject.App01
 
         public void MilesToFeet()
         {
-            PrintHeading();
             InputMiles();
             CalculateFeet();
             OutputFeet();
@@ -38,14 +38,12 @@ namespace ConsoleAppProject.App01
 
         public void FeetToMiles()
         {
-            PrintHeading();
             InputFeet();
             CalculateMiles();
             OutputMiles();
         }
         public void MilesToMetres()
         {
-            PrintHeading();
             InputMiles();
             CalculateMetres();
             OutputMetres();
@@ -93,7 +91,7 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void CalculateMetres()
         {
-            metres = feet / FEET_IN_MILES;
+            metres = miles * METRES_IN_MILES;
         }
 
         /// <summary>
