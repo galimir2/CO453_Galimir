@@ -84,11 +84,11 @@ namespace ConsoleAppProject.App01
             }
             if (FromUnit == "FEET" && IntoUnit == "METRES")
             {
-                ToDistance = FromDistance * FEET_IN_METRES;
+                ToDistance = FromDistance / FEET_IN_METRES;
             }
             if (FromUnit == "METRES" && IntoUnit == "FEET")
             {
-                ToDistance = FromDistance / FEET_IN_METRES;
+                ToDistance = FromDistance * FEET_IN_METRES;
             }
         }
 
