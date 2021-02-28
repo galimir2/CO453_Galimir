@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Runtime;
 using ConsoleAppProject.App01;
+using ConsoleAppProject.App02;
+
+
 namespace ConsoleAppProject
 {
     /// <summary>
@@ -21,6 +25,11 @@ namespace ConsoleAppProject
 
             DistanceConverter converter = new DistanceConverter();
             converter.Run();
+
+            BMI calculator = new BMI();
+            calculator.OutputUnit();
+            calculator.GetUnit();
         }
+
     }
 }
