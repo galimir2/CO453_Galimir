@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ConsoleAppProject
+namespace ConsoleAppProject { }
 
 
 public class ConsoleHelper
@@ -14,4 +14,6 @@ public class ConsoleHelper
             Console.WriteLine(choiceNo + ". " + choice);
         }
     }
+
+
 }
