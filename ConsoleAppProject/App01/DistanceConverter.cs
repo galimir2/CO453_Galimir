@@ -13,6 +13,11 @@ namespace ConsoleAppProject.App01
         public const int FEET_IN_MILES = 5280;
         public const double METRES_IN_MILES = 1609.34;
         public const double FEET_IN_METRES = 3.28084;
+
+        public const string FEET = "feet";
+        public const string METRES = "metres";
+        public const string MILES = "miles";
+
         private double ToDistance;
         private double FromDistance;
 
@@ -66,27 +71,27 @@ namespace ConsoleAppProject.App01
 
         private void ConvertToDistance()
         { 
-            if(FromUnit == "FEET" && IntoUnit == "MILES")
+            if(FromUnit == FEET && IntoUnit == MILES)
              {
                 ToDistance = FromDistance / FEET_IN_MILES;
              }
-            if (FromUnit == "MILES" && IntoUnit == "FEET")
+            else if (FromUnit == MILES && IntoUnit == FEET)
             {
                 ToDistance = FromDistance * FEET_IN_MILES;
             }
-            if (FromUnit == "MILES" && IntoUnit == "METRES")
+            else if (FromUnit == MILES && IntoUnit == METRES)
             {
                 ToDistance = FromDistance * METRES_IN_MILES;
             }
-            if (FromUnit == "METRES" && IntoUnit == "MILES")
+            else if (FromUnit == METRES && IntoUnit == MILES)
             {
                 ToDistance = FromDistance / METRES_IN_MILES;
             }
-            if (FromUnit == "FEET" && IntoUnit == "METRES")
+            else if (FromUnit == FEET && IntoUnit == METRES)
             {
                 ToDistance = FromDistance / FEET_IN_METRES;
             }
-            if (FromUnit == "METRES" && IntoUnit == "FEET")
+            else if (FromUnit == METRES && IntoUnit == FEET)
             {
                 ToDistance = FromDistance * FEET_IN_METRES;
             }
