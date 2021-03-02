@@ -8,7 +8,7 @@ namespace ConsoleAppProject.App01
     /// <author>
     /// Galimir Bozmarov version 0.1
     /// </author>
-    class DistanceConverter
+    public class DistanceConverter
     {
         public const int FEET_IN_MILES = 5280;
         public const double METRES_IN_MILES = 1609.34;
@@ -18,12 +18,12 @@ namespace ConsoleAppProject.App01
         public const string METRES = "metres";
         public const string MILES = "miles";
 
-        private double ToDistance;
-        private double FromDistance;
+        public double ToDistance { get; set; }
+        public double FromDistance { get; set; }
 
 
-        public string FromUnit;
-        public string IntoUnit;
+        public string FromUnit { get; set; }
+        public string IntoUnit { get; set; }
 
         ///<summary>
         ///This method will be used to input the distance in miles
@@ -46,8 +46,6 @@ namespace ConsoleAppProject.App01
             Console.WriteLine("Please chose one of the following units to convert from!");
             Console.WriteLine("Feet, Miles or Metres");
             FromUnit = Console.ReadLine();
-
-
         }
 
         private void InputToUnit()
@@ -69,7 +67,7 @@ namespace ConsoleAppProject.App01
         /// Used to convert distance
         /// </summary>
 
-        private void ConvertToDistance()
+        public void ConvertToDistance()
         { 
             if(FromUnit == FEET && IntoUnit == MILES)
              {
