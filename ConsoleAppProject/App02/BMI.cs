@@ -25,13 +25,13 @@ namespace ConsoleAppProject.App02
 
         public string[] MenuChoices = { METRIC, IMPERIAL};
 
-        public const double Underweight = 18.5;
-        public const double Normalweight = 24.9;
-        public const double Overweight = 29.9;
+        public const double UNDERWEIGHT = 18.5;
+        public const double NORMALWEIGHT = 24.9;
+        public const double OVERWEIGHT = 29.9;
 
-        public const double Obeseweight1 = 34.9;
-        public const double Obeseweight2 = 39.9;
-        public const double Obeseweight3 = 40.0;
+        public const double OBESEWEIGHT1 = 34.9;
+        public const double OBESEWEIGHT2 = 39.9;
+        public const double OBESEWEIGHT3 = 40.0;
 
 
         public void OutputUnit()
@@ -101,32 +101,32 @@ namespace ConsoleAppProject.App02
         {
             Console.WriteLine(SelectedUnit);
 
-            if (bmiResults < Underweight)
+            if (bmiResults < UNDERWEIGHT)
             {
                 Console.WriteLine("Your bmi is: " + bmiResults
                     + "\nYou are Underweight!");
             }
-            else if (bmiResults < Normalweight)
+            else if (bmiResults < NORMALWEIGHT)
             {
                 Console.WriteLine("Your bmi is: " + bmiResults
                     + "\nYou are healthy and you are in the normal range!");
             }
-            else if (bmiResults < Overweight)
+            else if (bmiResults < OVERWEIGHT)
             {
                 Console.WriteLine("Your bmi is: " + bmiResults
                     + "\nYou are Overweight!");
             }
-            else if (bmiResults < Obeseweight1)
+            else if (bmiResults < OBESEWEIGHT1)
             {
                 Console.WriteLine("Your bmi is: " + bmiResults
                     + "\nYou are obese level 1!");
             }
-            else if (bmiResults < Obeseweight2)
+            else if (bmiResults < OBESEWEIGHT2)
             {
                 Console.WriteLine("Your bmi is: " + bmiResults
                     + "\nYou are obese level 2!");
             }
-            else if (bmiResults >= Obeseweight3)
+            else if (bmiResults >= OBESEWEIGHT3)
             {
                 Console.WriteLine("Your bmi is: " + bmiResults
                     + "\nYou are obese level 3!");
