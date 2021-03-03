@@ -16,7 +16,15 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
-        public BMI BMI
+        public static BMI BMI
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public static DistanceConverter DistanceConverter
         {
             get => default;
             set

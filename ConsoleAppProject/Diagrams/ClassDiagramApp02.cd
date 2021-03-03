@@ -1,2 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsoleAppProject.Program">
+    <Position X="2" Y="1.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BMI" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleAppProject.App02.BMI">
+    <Position X="4.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABEAAABEiACAAAQAhIEAgABQBAAAEAggAAAAAAAAAAA=</HashCode>
+      <FileName>App02\BMI.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ConsoleHelper" />
+      <Property Name="SelectUnits" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ConsoleHelper">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ConsoleAppProject.App02.SelectUnits">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>App02\SelectUnits.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -25,7 +25,15 @@ namespace ConsoleAppProject.App01
         public string FromUnit { get; set; }
         public string IntoUnit { get; set; }
 
-        public DistanceConverter DistanceConverter1
+        public ConsoleHelper ConsoleHelper
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public DistanceUnits DistanceUnits
         {
             get => default;
             set
