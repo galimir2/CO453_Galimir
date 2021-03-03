@@ -25,6 +25,14 @@ namespace ConsoleAppProject.App01
         public string FromUnit { get; set; }
         public string IntoUnit { get; set; }
 
+        public DistanceConverter DistanceConverter1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         ///<summary>
         ///This method will be used to input the distance in miles
         ///then will calcualte the disntace in feet and will output
