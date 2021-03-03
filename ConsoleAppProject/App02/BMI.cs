@@ -92,7 +92,38 @@ namespace ConsoleAppProject.App02
 
         public void OutputResult()
         {
-            Console.WriteLine(SelectedUnit + " " + bmiResults);
+            Console.WriteLine(SelectedUnit);
+
+            if (bmiResults < Underweight)
+            {
+                Console.WriteLine("Your bmi is: " + bmiResults
+                    + "\nYou are Underweight!");
+            }
+            else if (bmiResults < Normalweight)
+            {
+                Console.WriteLine("Your bmi is: " + bmiResults
+                    + "\nYou are healthy and you are in the normal range!");
+            }
+            else if (bmiResults < Overweight)
+            {
+                Console.WriteLine("Your bmi is: " + bmiResults
+                    + "\nYou are Overweight!");
+            }
+            else if (bmiResults < Obeseweight1)
+            {
+                Console.WriteLine("Your bmi is: " + bmiResults
+                    + "\nYou are obese level 1!");
+            }
+            else if (bmiResults < Obeseweight2)
+            {
+                Console.WriteLine("Your bmi is: " + bmiResults
+                    + "\nYou are obese level 2!");
+            }
+            else if (bmiResults > Obeseweight3)
+            {
+                Console.WriteLine("Your bmi is: " + bmiResults
+                    + "\nYou are obese level 3!");
+            }
         }
 
         public void PrintHeading()
