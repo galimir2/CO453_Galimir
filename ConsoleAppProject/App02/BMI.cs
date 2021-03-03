@@ -52,14 +52,17 @@ namespace ConsoleAppProject.App02
             if (SelectedUnit == METRIC)
             {
                 Console.WriteLine("Please enter the weight in KGs: ");
+                weight = Convert.ToDouble(Console.ReadLine());
             }
             else
             {
                 Console.WriteLine("Please enter the weight in Stones: ");
+                double stones = Convert.ToDouble(Console.ReadLine());
+                weight = stones * 14;
                 Console.WriteLine("Please enter the weight in Pounds: ");
+                double pounds = Convert.ToDouble(Console.ReadLine());
+                weight += pounds;
             }
-
-            weight = Convert.ToDouble(Console.ReadLine());
             return weight;
         }
 
@@ -68,13 +71,17 @@ namespace ConsoleAppProject.App02
             if (SelectedUnit == METRIC)
             {
                 Console.WriteLine("Please enter the height in CMs: ");
+                height = Convert.ToDouble(Console.ReadLine());
             }
             else
             {
-                Console.WriteLine("Please enter the height in Feet: ");
-                Console.WriteLine("Please enter the height in Inches: ");
+                Console.WriteLine("Please enter the number of Feet: ");
+                double feet = Convert.ToDouble(Console.ReadLine());
+                height = feet * 12;
+                Console.WriteLine("Please enter the number of Inches: ");
+                double inches = Convert.ToDouble(Console.ReadLine());
+                height += inches;
             }
-            height = Convert.ToDouble(Console.ReadLine());
             return height;
         }
 
@@ -119,7 +126,7 @@ namespace ConsoleAppProject.App02
                 Console.WriteLine("Your bmi is: " + bmiResults
                     + "\nYou are obese level 2!");
             }
-            else if (bmiResults > Obeseweight3)
+            else if (bmiResults >= Obeseweight3)
             {
                 Console.WriteLine("Your bmi is: " + bmiResults
                     + "\nYou are obese level 3!");
