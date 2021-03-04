@@ -25,6 +25,8 @@ namespace ConsoleAppProject.App02
 
         public string[] MenuChoices = { METRIC, IMPERIAL};
 
+        public double INDEX;
+
         public const double UNDERWEIGHT = 18.5;
         public const double NORMALWEIGHT = 24.9;
         public const double OVERWEIGHT = 29.9;
@@ -110,6 +112,11 @@ namespace ConsoleAppProject.App02
             {
                 bmiResults = (weight * 703) / (height * height);
             }
+        }
+
+        public void IndexCaluclate()
+        {
+            INDEX = bmiResults;
         }
 
         public void OutputResult()

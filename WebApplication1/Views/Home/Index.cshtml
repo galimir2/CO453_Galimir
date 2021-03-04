@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "GB Home Page";
+}
+
+<header class="text-center jumbotron justify-content-center">
+    <h1 class="display-4">CO453 Applications Programming</h1>
+    <h2>by Galimir Bozmarov</h2>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</header>
+<section>
+    <ol class="list-group">
+        <li class="list-group-item">
+            <a class="btn btn-success" asp-controller="Home"
+               asp-action="DistanceConverter">App 01</a>
+            Distance Converter
+        </li>
+        <li class="list-group-item">
+            <a class="btn btn-info" asp-controller="Home"
+               asp-action="BMI">App 02</a>
+            BMI Calculator
+        </li>
+    </ol>
+</section>

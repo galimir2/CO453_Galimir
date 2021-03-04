@@ -1,0 +1,19 @@
+﻿@model double
+@using ConsoleAppProject.App02
+@{
+    ViewData["Title"] = "Output Result";
+}
+
+@{ 
+    BMI bmi = new BMI();
+    bmi.INDEX = Model;
+}
+
+<header class="jumbotron">
+    <h1>BMI Health Message</h1>
+    <h2>by Derek Peacock</h2>
+</header>
+
+<section>
+    <p>@bmi.Get</p>
+</section>
