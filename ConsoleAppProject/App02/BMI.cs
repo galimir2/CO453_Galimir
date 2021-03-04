@@ -35,27 +35,10 @@ namespace ConsoleAppProject.App02
         public const double OBESEWEIGHT2 = 39.9;
         public const double OBESEWEIGHT3 = 40.0;
 
-        public ConsoleHelper ConsoleHelper
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public SelectUnits SelectUnits
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         public void OutputUnit()
         {
             Console.WriteLine("Please Chose between: ");
             ConsoleHelper.OutputMenu(MenuChoices);
-
         }
 
         public string GetUnit()
