@@ -118,10 +118,7 @@ namespace ConsoleAppProject.App01
 
         private void PrintHeading()
         {
-            Console.WriteLine("\n-----------------------");
-            Console.WriteLine("\tConvert Distances");
-            Console.WriteLine("\tBy Galimir Bozmarov");
-            Console.WriteLine("\n-----------------------");
+            ConsoleHelper.OutputHeading("Distance Converter");
         }
     }
 }

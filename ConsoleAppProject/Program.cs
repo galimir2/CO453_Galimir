@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Runtime;
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App03;
+
 
 
 namespace ConsoleAppProject
@@ -16,27 +17,50 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
+        private static DistanceConverter converter = new DistanceConverter();
+
+        private static BMI calculator = new BMI();
+
+        private static StudentGrades grades = new StudentGrades();
+
+        public static BMI BMI
+        {
+            get => default;
+        }
+
+
         public static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            
+
             Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
             Console.WriteLine();
 
-            //DistanceConverter converter = new DistanceConverter();
-            //converter.Run();
+            string[] choices = { "Distance Converter", "BMI Calculator", "Student Marks" };
 
-            BMI calculator = new BMI();
-            calculator.PrintHeading();
-            calculator.OutputUnit();
-            calculator.GetUnit();
-            calculator.GetWeight();
-            calculator.GetHeight();
-            calculator.CalculateBMI();
-            calculator.OutputResult();
-            
-            
+
+        int choiceNo = ConsoleHelper.MakeChoice(choices);
+
+            if (choiceNo == 1)
+            {
+                converter.Run();
+            }
+            else if (choiceNo == 2)
+            {
+                calculator.PrintHeading();
+                calculator.OutputUnit();
+                calculator.GetUnit();
+                calculator.GetWeight();
+                calculator.GetHeight();
+                calculator.CalculateBMI();
+                calculator.OutputResult();
+            }
+            else if (choiceNo == 3)
+            {
+                grades.Run();
+            }
+            else Console.WriteLine("Invalid Choice !");
         }
-
     }
 }
+

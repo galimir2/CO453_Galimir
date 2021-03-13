@@ -140,10 +140,7 @@ namespace ConsoleAppProject.App02
 
         public void PrintHeading()
         {
-            Console.WriteLine("\n-----------------------");
-            Console.WriteLine("\tBMI Calculator");
-            Console.WriteLine("\tBy Galimir Bozmarov");
-            Console.WriteLine("\n-----------------------");
+            ConsoleHelper.OutputHeading("BMI Calculator");
         }
     }
 
