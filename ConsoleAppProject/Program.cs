@@ -57,7 +57,7 @@ namespace ConsoleAppProject
             }
             else if (choiceNo == 3)
             {
-                grades.Run();
+                grades.DisplayMenu();
             }
             else Console.WriteLine("Invalid Choice !");
         }
