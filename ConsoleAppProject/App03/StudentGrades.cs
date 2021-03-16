@@ -3,7 +3,8 @@
 namespace ConsoleAppProject.App03
 {
     /// <summary>
-    /// 
+    /// Application for converting marks into grades and calculating
+    /// the mean, maximum and minimum mark that were entered.
     /// </summary>
     public class StudentGrades
     {
@@ -17,18 +18,21 @@ namespace ConsoleAppProject.App03
         public const int HighestMark = 100;
 
         // Properties
-        public string[] STUDENTS;
+        public string[] STUDENTS { get; set; }
 
-        public int[] MARKS;
+        public int[] MARKS { get; set; }
 
-        public int[] GradeProfile;
+        public int[] GradeProfile { get; set; }
 
-        public double MEAN;
+        public double MEAN { get; set; }
 
-        public int MINMARK;
+        public int MINMARK { get; set; }
 
-        public int MAXMARK;
+        public int MAXMARK { get; set; }
 
+        /// <summary>
+        /// Used by class diagram
+        /// </summary>
         public ConsoleHelper ConsoleHelper
         {
             get => default;
@@ -37,6 +41,9 @@ namespace ConsoleAppProject.App03
             }
         }
 
+        /// <summary>
+        /// Used by class diagram
+        /// </summary>
         public Grades Grades
         {
             get => default;
@@ -57,6 +64,9 @@ namespace ConsoleAppProject.App03
             
         }
 
+        /// <summary>
+        /// Contains the 10 students and inputs the marks for all the students
+        /// </summary>
         public void InputMarks()
         {
             int Mark;
@@ -83,7 +93,7 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// 
+        /// Outputs the marks for all the students
         /// </summary>
         public void OutputMarks()
         {
@@ -94,36 +104,37 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// 
+        /// Turns the marks into grades
         /// </summary>
-        public Grades ConvertToGrade(int MARKS)
+        public Grades ConvertToGrade(int Marks)
         {
-            if (MARKS >= 0 && MARKS < LOWESTGRADED)
+            if (Marks >= 0 && Marks < LOWESTGRADED)
             {
                 return Grades.F;
             }
-            else if (MARKS >= LOWESTGRADED && MARKS < LOWESTGRADEC)
+            else if (Marks >= LOWESTGRADED && Marks < LOWESTGRADEC)
             {
                 return Grades.D;
             }
-            else if (MARKS >= LOWESTGRADEC && MARKS < LOWESTGRADEB)
+            else if (Marks >= LOWESTGRADEC && Marks < LOWESTGRADEB)
             {
                 return Grades.C;
             }
-            else if (MARKS >= LOWESTGRADEB && MARKS < LOWESTGRADEA)
+            else if (Marks >= LOWESTGRADEB && Marks < LOWESTGRADEA)
             {
                 return Grades.B;
             }
-            else if (MARKS >= LOWESTGRADEA && MARKS < HighestMark)
+            else if (Marks >= LOWESTGRADEA && Marks <= HighestMark)
             {
                 return Grades.A;
             }
-            else
-                return Grades.G;
+
+            return Grades.F;
+            
         }
 
         /// <summary>
-        /// 
+        /// Calculation for the maximum, minimum and mean marks
         /// </summary>
         public void CalculateStats()
         {
@@ -142,6 +153,9 @@ namespace ConsoleAppProject.App03
             MEAN = total / MARKS.Length;
         }
 
+        /// <summary>
+        /// Outputs the mean, minimum and maximum marks
+        /// </summary>
         public void OutputStats()
         {
             OutputMean();
@@ -169,7 +183,7 @@ namespace ConsoleAppProject.App03
         }
 
         /// <summary>
-        /// 
+        /// Calculates the the gradeprofile
         /// </summary>
         public void CalculateGradeProfile()
         {
@@ -184,10 +198,13 @@ namespace ConsoleAppProject.App03
             }
             OutputGradeProfile();
         }
-
+        
+        /// <summary>
+        /// Outputs the gradeprofile and the formula for the calculation
+        /// </summary>
         public void OutputGradeProfile()
         {
-            Grades grade = Grades.G;
+            Grades grade = Grades.F;
 
             foreach (int count in GradeProfile)
             {
