@@ -29,6 +29,22 @@ namespace ConsoleAppProject.App03
 
         public int MAXMARK;
 
+        public ConsoleHelper ConsoleHelper
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Grades Grades
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void DisplayMenu() 
         {
             ConsoleHelper.OutputHeading("Student Marks");

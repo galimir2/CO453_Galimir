@@ -28,6 +28,13 @@ namespace ConsoleAppProject
             get => default;
         }
 
+        public static StudentGrades StudentGrades
+        {
+            get => default;
+            set
+            {
+            }
+        }
 
         public static void Main(string[] args)
         {
