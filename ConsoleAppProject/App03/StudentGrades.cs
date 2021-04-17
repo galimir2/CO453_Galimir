@@ -130,7 +130,7 @@ namespace ConsoleAppProject.App03
             }
 
             return Grades.F;
-            
+
         }
 
         /// <summary>
@@ -205,6 +205,7 @@ namespace ConsoleAppProject.App03
         public void OutputGradeProfile()
         {
             Grades grade = Grades.F;
+            Console.WriteLine();
 
             foreach (int count in GradeProfile)
             {

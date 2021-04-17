@@ -43,7 +43,7 @@ namespace ConsoleAppProject
             Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
             Console.WriteLine();
 
-            string[] choices = { "Distance Converter", "BMI Calculator", "Student Marks" };
+            string[] choices = { "Distance Converter", "BMI Calculator", "Student Marks", "Social Network" };
 
 
         int choiceNo = ConsoleHelper.MakeChoice(choices);
@@ -65,6 +65,10 @@ namespace ConsoleAppProject
             else if (choiceNo == 3)
             {
                 grades.DisplayMenu();
+            }
+            else if (choiceNo == 4)
+            {
+                ///grades.DisplayMenu();
             }
             else Console.WriteLine("Invalid Choice !");
         }
