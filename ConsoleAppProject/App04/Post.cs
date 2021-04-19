@@ -92,7 +92,7 @@ namespace ConsoleAppProject.App04
         /// Method to print out the post and its details.
         /// </summary>
 
-        public virtual void PrintPost()
+        public virtual void Display()
         {
             Console.WriteLine();
             Console.WriteLine();
