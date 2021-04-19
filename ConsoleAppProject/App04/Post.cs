@@ -120,7 +120,10 @@ namespace ConsoleAppProject.App04
                 Console.WriteLine($"    {comments.Count}  comment(s). Click here to load all the comments.");
             }
         }
+
+        public static int GetNumberOfPosts()
+        {
+            return instances;
+        }
     }
-
-
 }

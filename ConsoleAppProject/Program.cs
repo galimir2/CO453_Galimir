@@ -2,6 +2,8 @@
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
+using ConsoleAppProject.App05;
 
 
 
@@ -22,6 +24,8 @@ namespace ConsoleAppProject
         private static BMI calculator = new BMI();
 
         private static StudentGrades grades = new StudentGrades();
+
+        private static NetworkApp news = new NetworkApp();
 
         public static BMI BMI
         {
@@ -68,7 +72,7 @@ namespace ConsoleAppProject
             }
             else if (choiceNo == 4)
             {
-                ///grades.DisplayMenu();
+                news.DisplayMenu();
             }
             else Console.WriteLine("Invalid Choice !");
         }
