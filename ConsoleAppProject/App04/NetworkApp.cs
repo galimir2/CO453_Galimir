@@ -24,7 +24,7 @@ namespace ConsoleAppProject.App04
                 "Post Message", "Post Image",
                 "Remove Post", "Display All Posts",
                 "Display Posts by Username", "Display Posts by Date",
-                "Add Comments to the Post",  "Like and Unlike the Post",
+                "Add Comments to the Post",  "Like a Post", "Unlike a post",
                 "Quit"
             };
 
@@ -44,12 +44,14 @@ namespace ConsoleAppProject.App04
                     case 6: DisplayByDate(); break;
                     case 7: AddComment(); break;
                     case 8: LikePosts(); break;
-                    case 9: Quit = true; break;
+                    case 9: UnlikeLikePosts(); break;
+                    case 10: Quit = true; break;
                 }
 
             } while (!Quit);
         }
 
+        
         private void DisplayAll()
         {
             news.Display();
@@ -109,14 +111,38 @@ namespace ConsoleAppProject.App04
             post.Display();
         }
 
+        public Post FindPost()
+        {
+            int postID;
+            postID = (int)ConsoleHelper.InputNumber("Please enter the ID of the post: ");
+            return news.FindPost(postID);
+        }
+
         private void LikePosts()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Like a Post");
+            Post post = FindPost();
+
+            post.Like();
         }
+
+        private void UnlikeLikePosts()
+        {
+            Console.WriteLine("Unlike a Post");
+            Post post = FindPost();
+
+            post.Unlike();
+        }
+
 
         private void AddComment()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Add a comment to a Post");
+            Post post = FindPost();
+            post.Display();
+            Console.WriteLine("Please enter your comment!");
+            string comment = Console.ReadLine();
+            post.AddComments(comment);
         }
 
         private void DisplayByDate()
@@ -126,7 +152,11 @@ namespace ConsoleAppProject.App04
 
         private void DisplayByAuthor()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Which users posts would you like to find ");
+            string author = Console.ReadLine();
+            
+            news.FindPostByUser(author);
+            
         }
 
     }

@@ -68,7 +68,9 @@ namespace ConsoleAppProject.App04
                 post.Display();
             }
         }
-
+        ///<summary>
+        /// This method is used to find a post by the posts ID.
+        ///</summary>
         public Post FindPost(int id)
         {
             foreach (Post post in posts)
@@ -80,7 +82,28 @@ namespace ConsoleAppProject.App04
             }
             return null;
         }
+        ///<summary>
+        /// This method is used to find posts by the user name.
+        ///</summary>
+        public Post FindPostByUser(string author)
+        {
+            int counter = 0;
 
+            foreach (Post post in posts)
+            {
+                if (post.Username == author)
+                {
+                    post.Display();
+                    Console.WriteLine();   // empty line between posts
+                    counter++;
+                }
+                if (counter == 0)
+                {
+                    Console.WriteLine("No user has been found!");
+                }    
+            }
+            return null;
+        }
         ///<summary>
         /// Show the news feed. Currently: print the news feed details to the
         /// terminal. (To do: replace this later with display in web browser.)
