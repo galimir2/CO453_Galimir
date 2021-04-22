@@ -17,16 +17,22 @@
   <Class Name="ConsoleAppProject.App04.NewsFeed">
     <Position X="4.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAgAAAEAAAAAAAAAYCAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAAAAgAAAEAAAAAAAAAYCACAAAAQAAAAAAAAAAAAA=</HashCode>
       <FileName>App04\NewsFeed.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Post" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ConsoleAppProject.App04.NetworkApp">
     <Position X="1.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAEAAIAAAAAEAAAAAAAIAAAAAAABQAAAMAQgABAAA=</HashCode>
+      <HashCode>EAAAEAAIAAIAAEAAAAAAAIAAAAAAABQAAAMAQgABAAA=</HashCode>
       <FileName>App04\NetworkApp.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NewsFeed" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ConsoleAppProject.App04.MessagePost">
     <Position X="11.75" Y="3.25" Width="1.5" />

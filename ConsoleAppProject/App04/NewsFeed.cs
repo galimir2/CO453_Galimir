@@ -30,6 +30,14 @@ namespace ConsoleAppProject.App04
             posts = new List<Post>();
         }
 
+        public Post Post
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
 
         ///<summary>
         /// Add a text post to the news feed.

@@ -12,8 +12,16 @@ namespace ConsoleAppProject.App04
     {
         private readonly NewsFeed news = new NewsFeed();
 
+        public NewsFeed NewsFeed
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         /// <summary>
-        /// 
+        /// Prints out the menu for the app.
         /// </summary>
         public void DisplayMenu()
         {
@@ -57,6 +65,10 @@ namespace ConsoleAppProject.App04
             news.Display();
         }
 
+        /// <summary>
+        /// Method to remove a post.
+        /// </summary>
+        
         private void RemovePost()
         {
             ConsoleHelper.OutputTitle("Romove a Post");
@@ -66,6 +78,9 @@ namespace ConsoleAppProject.App04
             news.RemovePost(id);
         }
 
+        /// <summary>
+        /// Method to post an image.
+        /// </summary>
         private void PostImage()
         {
             ConsoleHelper.OutputTitle("Posting an Image/Photo");
