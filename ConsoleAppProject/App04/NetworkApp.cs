@@ -71,7 +71,7 @@ namespace ConsoleAppProject.App04
         
         private void RemovePost()
         {
-            ConsoleHelper.OutputTitle("Romove a Post");
+            ConsoleHelper.OutputTitle("Remove a Post");
 
             int id = (int)ConsoleHelper.InputNumber("Please enter the post id: ",
                                                     1, Post.GetNumberOfPosts());
