@@ -51,7 +51,7 @@ namespace ConsoleAppProject.App04
             } while (!Quit);
         }
 
-        
+
         private void DisplayAll()
         {
             news.Display();
@@ -154,9 +154,9 @@ namespace ConsoleAppProject.App04
         {
             Console.WriteLine("Which users posts would you like to find ");
             string author = Console.ReadLine();
-            
+
             news.FindPostByUser(author);
-            
+
         }
 
     }

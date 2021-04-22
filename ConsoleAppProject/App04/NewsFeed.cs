@@ -30,14 +30,6 @@ namespace ConsoleAppProject.App04
             posts = new List<Post>();
         }
 
-        public Post Post
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
 
         ///<summary>
         /// Add a text post to the news feed.
@@ -67,10 +59,10 @@ namespace ConsoleAppProject.App04
             {
                 Console.WriteLine($" \nPost with ID = {id} does not exist!\n");
             }
-            else 
+            else
             {
                 Console.WriteLine($" \nThe following post {id} has been removed!\n");
-                
+
 
                 posts.Remove(post);
                 post.Display();
@@ -108,7 +100,7 @@ namespace ConsoleAppProject.App04
                 if (counter == 0)
                 {
                     Console.WriteLine("No user has been found!");
-                }    
+                }
             }
             return null;
         }
@@ -116,6 +108,7 @@ namespace ConsoleAppProject.App04
         /// Show the news feed. Currently: print the news feed details to the
         /// terminal. (To do: replace this later with display in web browser.)
         ///</summary>
+
         public void Display()
         {
             // display all text posts
