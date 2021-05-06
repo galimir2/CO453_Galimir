@@ -102,6 +102,9 @@ namespace ConsoleAppProject.App04
             post.Display();
         }
 
+        /// <summary>
+        /// Method to input the name.
+        /// </summary>
         private string InputName()
         {
             Console.Write("Please enter your name: ");
